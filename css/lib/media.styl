@@ -1,0 +1,10 @@
+media($constraint, $axis, $value)
+
+  $resolvedValue = $breakpoints[$axis][$value]
+
+  if($constraint == 'max') {
+    $resolvedValue -= 0.01
+  }
+
+  @media ({$constraint}-{$axis} $resolvedValue)
+    {block}

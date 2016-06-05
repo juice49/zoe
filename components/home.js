@@ -1,7 +1,8 @@
 'use strict';
 
 import React from 'react';
+import Carousel from './carousel';
 
 export default props => (
-  <h1>Home</h1>
+  <Carousel />
 );

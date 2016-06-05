@@ -161,7 +161,7 @@ svg {
   box-sizing: border-box;
   color: #000;
   cursor: default;
-  font: 100%/1.5 sans-serif;
+  font: 100%/1.5 adelle, serif;
 }
 a {
   text-decoration: none;
@@ -233,11 +233,16 @@ textarea {
   text-shadow: none;
 }
 :root {
-  font-family: adelle;
   -webkit-font-smoothing: antialiased;
 }
-* + * {
-  margin-top: 1rem;
+body {
+  min-height: 100vh;
+}
+body * + * {
+  margin-top: 1em;
+}
+.u-margins-lg > * + * {
+  margin-top: 4em;
 }
 .u-margins-off > * + * {
   margin-top: 0;
@@ -250,4 +255,48 @@ textarea {
 }
 body {
   background: #fffff2;
+}
+.nav-icon {
+  display: block;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  margin-top: 0;
+}
+.nav-icon__container {
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+  fill: none;
+}
+.nav-icon__edge {
+  stroke: #6e5584;
+  -webkit-filter: drop-shadow 0 1px 1px rgba(0,0,0,0.5);
+          filter: drop-shadow 0 1px 1px rgba(0,0,0,0.5);
+}
+.nav-icon__line {
+  fill: #6e5584;
+  width: 48%;
+  height: 6px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 90ms ease-out;
+  transition: -webkit-transform 90ms ease-out;
+  transition: transform 90ms ease-out;
+  transition: transform 90ms ease-out, -webkit-transform 90ms ease-out;
+}
+.nav-icon__line--1 {
+  -webkit-transform: translate3d(20.6px, 31px, 0);
+          transform: translate3d(20.6px, 31px, 0);
+}
+.nav-icon:hover .nav-icon__line--1 {
+  -webkit-transform: translate3d(20.6px, 41px, 0) rotate(45deg);
+          transform: translate3d(20.6px, 41px, 0) rotate(45deg);
+}
+.nav-icon__line--2 {
+  -webkit-transform: translate3d(20.6px, 51px, 0);
+          transform: translate3d(20.6px, 51px, 0);
+}
+.nav-icon:hover .nav-icon__line--2 {
+  -webkit-transform: translate3d(20.6px, 41px, 0) rotate(-45deg);
+          transform: translate3d(20.6px, 41px, 0) rotate(-45deg);
 }

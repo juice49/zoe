@@ -1,11 +1,30 @@
-@import 'sanitize.css/lib/sanitize'
+root-font-family = adelle, serif
+
+$breakpoints = {
+  width: {
+    sm: 50em,
+    md: 60em,
+    lg: 110em
+  }
+}
+
+$myPink = #D58C8D
+$affair = #6E5584
+
+@require './lib/*.styl'
+@require 'sanitize.css/lib/sanitize'
 
 :root
-  font-family adelle
   -webkit-font-smoothing antialiased
 
-* + *
-  margin-top 1rem
+body
+  min-height 100vh
+
+body * + *
+  margin-top 1em
+
+.u-margins-lg > * + *
+  margin-top 4em
 
 .u-margins-off > * + *
   margin-top 0
@@ -18,3 +37,37 @@
 
 body
   background #fffff2
+
+.nav-icon
+  display block
+  position fixed
+  right 1rem
+  top @right
+  margin-top 0
+
+.nav-icon__container
+  transform translate(4px, 4px)
+  fill none
+
+.nav-icon__edge
+  stroke $affair
+  filter drop-shadow 0 1px 1px rgba(0, 0, 0, 0.5)
+
+.nav-icon__line
+  fill $affair
+  width 48%
+  height 6px
+  transform-origin center
+  transition transform 90ms ease-out
+
+.nav-icon__line--1
+  transform translate3d(20.6px, 31px, 0)
+
+  .nav-icon:hover &
+    transform translate3d(20.6px, 41px, 0) rotate(45deg)
+
+.nav-icon__line--2
+  transform translate3d(20.6px, 51px, 0)
+
+  .nav-icon:hover &
+    transform translate3d(20.6px, 41px, 0) rotate(-45deg)

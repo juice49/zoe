@@ -2,16 +2,20 @@
 
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import NavIcon from './nav-icon';
 
 const Nav = props => (
-  <nav className={css(styles.nav)}>
-    <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>Home</a>
-    <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>About</a>
-    <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>Portfolio</a>
-    <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>Pricing</a>
-    <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>Booth</a>
-    <a className={`${css(styles.navItem)}  u-color-inherit`} href='mailto:hi@zoe.is'>hi@zoe.is</a>
-  </nav>
+  <div>
+    <nav className={`${css(styles.nav)}  u-margins-off`}>
+      <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>Home</a>
+      <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>About</a>
+      <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>Portfolio</a>
+      <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>Pricing</a>
+      <a className={`${css(styles.navItem)}  u-color-inherit`} href='#'>Booth</a>
+      <a className={`${css(styles.navItem)}  u-color-inherit`} href='mailto:hi@zoe.is'>hi@zoe.is</a>
+    </nav>
+    <NavIcon />
+  </div>
 );
 
 export default Nav;
